@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="~/scripts/jquery-1.6.4.min.js"></script>
+    <script src="~/scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>      @*这个js文件本地没有，动态生成*@
+    <script src="~/scripts/bindHub.js"></script>
+    <style>
+        #message_box {
+            height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <ul id="message_box"></ul>
+        </div>
+        发送者名称:<input id="text_name" class="form-control"/><br/>
+        消息内容:
+        <textarea id="text_message" class="form-control" rows="3"></textarea>
+        <br/>
+        <button id="btn_send" class="btn btn-block btn-success">Send</button>
+    </div>
+</div>
+</body>
+</html>
